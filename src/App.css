@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.formik {
+  max-width: 1365px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  overflow: hidden;
+}
+
+.img {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.opacity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  opacity: 0.8;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  background: url("../background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+label {
+  display: flex;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+input + label {
+  font-weight: bold;
+  display: inline-flex;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 6px 0px;
+  display: block;
+  font-size: 15px;
+  color: #444;
+  border-bottom: 1px solid #ccc;
+}
+
+.formControl {
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 30px;
+  color: #fff;
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: #000;
+  border-radius: 8px 0px 8px 8px;
+  -webkit-border-radius: 8px 0px 8px 8px;
+  -moz-border-radius: 8px 0px 8px 8px;
+  -ms-border-radius: 8px 0px 8px 8px;
+  -o-border-radius: 8px 0px 8px 8px;
+}
+
+.error {
+  color: red;
+}
+
+.conditions {
+  display: flex;
+  align-items: center;
+  color: #555;
+  margin-top: 30px;
+}
+.conditions label {
+  font-size: 12px !important;
+}
+
+.check {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .formik {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .img {
+    width: 100%;
+    position: absolute;
+    height: 100%;
   }
+  .opacity {
+    font-size: 30px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  form {
+    position: absolute;
+
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    height: 85%;
+    bottom: 0px;
+    padding-top: 60px;
+    border-radius: 70px 0 0 0;
+    -webkit-border-radius: 70px 0 0 0;
+    -moz-border-radius: 70px 0 0 0;
+    -ms-border-radius: 70px 0 0 0;
+    -o-border-radius: 70px 0 0 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
 }

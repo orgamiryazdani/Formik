@@ -20,6 +20,7 @@ const selectOptions = [
   { id: 2, label: "Germany", value: "GER" },
   { id: 3, label: "USA", value: "US" },
 ];
+
 const validationSchema = Yup.object({
   name: Yup.string()
     .required("name is required")

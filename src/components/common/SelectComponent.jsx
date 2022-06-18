@@ -11,9 +11,6 @@ const SelectComponent = ({ value, options, id, name, formik }) => {
         onChange={(option) => {
           formik.setFieldValue("country", option.id);
         }}
-        onBlur={() => {
-          formik.handleBlur({ target: { name: "country" } });
-        }}
       />
       {formik.errors[name] && formik.touched[name] && (
         <div className="error">{formik.errors[name]}</div>
